@@ -29,7 +29,7 @@ else:
 # Executables
 executable = 'python'  # specify your own python interpreter path here
 rootdir = '../'
-scriptname = 'main.py'
+scriptname = 'main2.py'
 
 # ===Program===
 if_test = int(False)
@@ -38,8 +38,8 @@ CUDA = int(True)
 oracle_pretrain = int(True)
 gen_pretrain = int(False)
 dis_pretrain = int(False)
-MLE_train_epoch = 100
-ADV_train_epoch = 201
+MLE_train_epoch = 10000
+ADV_train_epoch = 20001
 tips = 'SeqGAN experiments'
 
 # ===Oracle  or Real===
@@ -54,26 +54,26 @@ model_type = 'vanilla'
 gen_init = 'normal'
 dis_init = 'uniform'
 samples_num = 19840
-batch_size = 64
+batch_size = 32
 max_seq_len = 50
 gen_lr = 0.01
 dis_lr = 1e-4
-pre_log_step = 10
+pre_log_step = 100
 adv_log_step = 1
 
 # ===Generator===
 ADV_g_step = 1
 rollout_num = 16
-gen_embed_dim = 32
-gen_hidden_dim = 32
+gen_embed_dim = 132
+gen_hidden_dim = 164
 
 # ===Discriminator===
 d_step = 5
 d_epoch = 3
 ADV_d_step = 4
 ADV_d_epoch = 2
-dis_embed_dim = 64
-dis_hidden_dim = 64
+dis_embed_dim = 32
+dis_hidden_dim = 164
 
 # ===Metrics===
 use_nll_oracle = int(True)
