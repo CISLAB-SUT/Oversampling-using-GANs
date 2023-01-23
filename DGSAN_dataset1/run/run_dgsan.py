@@ -40,7 +40,7 @@ oracle_pretrain = int(True)
 gen_pretrain = int(False)
 dis_pretrain = int(False)
 MLE_train_epoch = 0
-ADV_train_epoch = 201
+ADV_train_epoch = 20000
 tips = 'DGSAN experiments'
 
 # ===Oracle  or Real===
@@ -49,22 +49,22 @@ tips = 'DGSAN experiments'
 if_real_data = [int(True)]#, int(True), int(True)]
 dataset = ['sentineg']#, 'image_coco', 'emnlp_news']
 # vocab_size = [5000, 0, 0]
-vocab_size = [28543]#, 0, 0]
+vocab_size = [280543]#, 0, 0]
 
 # ===Basic Param===
 data_shuffle = int(False)
 model_type = 'vanilla'
 gen_init = 'truncated_normal'
 samples_num = 19840
-batch_size = 32
+batch_size = 64
 max_seq_len = 50
 gen_lr = 1e-2
 pre_log_step = 10
-adv_log_step = 5
+adv_log_step = 500
 
 # ===Generator===
-gen_embed_dim = 32
-gen_hidden_dim = 32
+gen_embed_dim = 132
+gen_hidden_dim = 164
 
 # ===Metrics===
 use_nll_oracle = int(True)
