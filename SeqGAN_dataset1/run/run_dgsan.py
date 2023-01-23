@@ -39,7 +39,7 @@ oracle_pretrain = int(True)
 gen_pretrain = int(False)
 dis_pretrain = int(False)
 MLE_train_epoch = 0
-ADV_train_epoch = 200
+ADV_train_epoch = 20000
 tips = 'DGSAN experiments'
 
 # ===Oracle  or Real===
@@ -52,15 +52,15 @@ data_shuffle = int(False)
 model_type = 'vanilla'
 gen_init = 'truncated_normal'
 samples_num = 10000
-batch_size = 64
+batch_size = 32
 max_seq_len = 20
 gen_lr = 1e-2
-pre_log_step = 10
-adv_log_step = 5
+pre_log_step = 100
+adv_log_step = 50
 
 # ===Generator===
-gen_embed_dim = 32
-gen_hidden_dim = 32
+gen_embed_dim = 62
+gen_hidden_dim = 132
 
 # ===Metrics===
 use_nll_oracle = int(True)
