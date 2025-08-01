@@ -40,9 +40,9 @@ CUDA = int(True)
 oracle_pretrain = int(True)
 gen_pretrain = int(False)
 dis_pretrain = int(False)
-MLE_train_epoch = 1200
+MLE_train_epoch = 120
 clas_pre_epoch = 5
-ADV_train_epoch = 100000
+ADV_train_epoch = 100
 tips = 'SentiGAN experiments'
 
 # ===Oracle or Real===
@@ -55,7 +55,7 @@ data_shuffle = int(False)
 model_type = 'vanilla'
 gen_init = 'normal'
 dis_init = 'uniform'
-samples_num = 300000
+samples_num = 10000
 batch_size = 64
 max_seq_len = 20
 gen_lr = 0.01
@@ -66,15 +66,15 @@ adv_log_step = 1
 # ===Generator===
 ADV_g_step = 1
 rollout_num = 16
-gen_embed_dim = 132
-gen_hidden_dim = 162
+gen_embed_dim = 32
+gen_hidden_dim = 32
 
 # ===Discriminator===
 d_step = 5
 d_epoch = 3
 ADV_d_step = 4
 ADV_d_epoch = 2
-dis_embed_dim = 32
+dis_embed_dim = 64
 dis_hidden_dim = 64
 
 # ===Metrics===
