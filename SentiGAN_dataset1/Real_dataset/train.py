@@ -22,16 +22,16 @@ args = parser.parse_args()
 #########################################################################################
 #  Generator  Hyper-parameters
 ######################################################################################
-EMB_DIM = 250 # embedding dimension
-HIDDEN_DIM = 280 # hidden state dimension of lstm cell
+EMB_DIM = 200 # embedding dimension
+HIDDEN_DIM = 200 # hidden state dimension of lstm cell
 MAX_SEQ_LENGTH = 50  # max sequence length
-BATCH_SIZE = 164
+BATCH_SIZE = 64
 
 
 #########################################################################################
 #  Discriminator  Hyper-parameters
 #########################################################################################
-dis_embedding_dim = 164
+dis_embedding_dim = 64
 dis_filter_sizes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15]
 dis_num_filters = [100, 200, 200, 200, 200, 100, 100, 100, 100, 100, 160]
 dis_dropout_keep_prob = 0.75
@@ -42,7 +42,7 @@ dis_batch_size = 64
 #########################################################################################
 #  Basic Training Parameters
 #########################################################################################
-TOTAL_BATCH = 20000
+TOTAL_BATCH = 201
 dataset_path = "./data/sentineg/"
 emb_dict_file = dataset_path + "sentineg_word.vocab"
 
@@ -69,7 +69,7 @@ eval_file = 'save/eval_file.txt'
 eval_text_file = 'save/eval_text_file.txt'
 negative_file = 'save/generator_sample.txt'
 infer_file = 'save/infer/'
-my_file = 'save/my_file.txt'
+my_file = 'save/my_file2.txt'
 
 
 def generate_samples(sess, trainable_model, generated_num, output_file, vocab_list, if_log=False, epoch=0):
